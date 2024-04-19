@@ -26,7 +26,7 @@ function Landing() {
             <Button color={'bg-slate-100 mt-5'}><span className='font-bold'>Adopt a pet</span></Button>
           </div>
           <div className='relative overflow-hidden'>
-            <img className='bottom-0 absolute h-80' src={pet2}/>
+            <img className='bottom-0 absolute h-80 right-52' src={pet2}/>
             <img className='-bottom-36 -right-16 absolute h-92' src={pet3}/>
           </div>
         </div>
@@ -50,25 +50,25 @@ function Content()
 {
   return (
     <>
-    <Card classname={'h-60 bg-sky-200 px-8'}>
+    <Card style={'h-60 bg-blue-200 px-8'}>
       <div className='flex justify-center'>
         <label className='font-bold text-lg w-max'>Life-Saving Mission</label>
       </div>
       <p>By choosing to adopt from us, you're not just bringing home a pet, our animals come from shelters or rescue groups, giving them a secod chance at happiness.</p>
     </Card>
-    <Card classname={'h-60 bg-sky-200 px-8'}>
+    <Card style={'h-60 bg-blue-200 px-8'}>
       <div className='flex justify-center'>
         <label className='font-bold text-lg w-max'>Variety of Pets</label>
       </div>
       <p>From playful puppies and kittens to seasoned seniors, we have a wide range of pets available for adoption, we're confident we can find the perfect match for you.</p>
     </Card>
-    <Card classname={'h-60 bg-sky-200 px-8'}>
+    <Card style={'h-60 bg-blue-200 px-8'}>
       <div className='flex justify-center'>
         <label className='font-bold text-lg w-max'>Health and Wellness</label>
       </div>
       <p>Each of our pets receives thorough medical care including vaccinations, spaying/neutering, and any nessary treatments.</p>
     </Card>
-    <Card classname={'h-60 bg-sky-200 px-8'}>
+    <Card style={'h-60 bg-blue-200 px-8'}>
       <div className='flex justify-center'>
         <label className='font-bold text-lg w-max'>Support and Guidance</label>
       </div>

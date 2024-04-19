@@ -28,7 +28,7 @@ function Finder() {
         <div className='flex justify-center'>
             <h1 className='font-extrabold text-2xl'>Finder Tool</h1>
         </div>      
-        <div className='px-20 mt-5'>
+        <div className='mt-5'>
         <section className='flex justify-center '>
           <div className={`border-2 border-slate-400 w-full p-1 text-left flex rounded-bl-md rounded-tl-md`}>
             <img className='h-7' src={HomeIcon}/>
