@@ -1,0 +1,34 @@
+.curveTop {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.curveTop svg {
+    position: relative;
+    display: block;
+    width: calc(109% + 1.3px);
+    height: 165px;
+}
+
+.curveTop .shape {
+    fill: #F1F5F9;
+}
+
+#Landing {
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Content {
+    background-image: url(../images/paw.png);
+    background-size: cover;
+    background-repeat: repeat;
+    background-size: 100px 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

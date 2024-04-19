@@ -1,0 +1,23 @@
+#Login {
+    background-image: url('./images/bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Login img {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
+
+#Register {
+    background-image: url('./images/bg.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#Register img {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+}
