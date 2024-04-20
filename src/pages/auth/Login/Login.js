@@ -8,8 +8,10 @@ function Login() {
   return (
     <>
       <div className='h-screen' id={styles.Login}>
-        <div className='grid grid-cols-2 h-full'>
-          <div className='px-24'>
+        <div className='lg:hidden bg-slate-100 h-96'></div>
+        <div className='lg:hidden bg-blue-800 h-60'></div>
+        <div className='grid lg:grid-cols-2 h-full absolute top-0'>
+          <div className='px-10 lg:px-24'>
             <div className='mt-20'>
               <label className=' text-3xl font-extrabold'>Whisker Way</label>
             </div>
@@ -45,7 +47,7 @@ function Login() {
             </div>
           </div>
           <div>
-            <img src={bg2}/>
+            <img src={bg2} alt='img'/>
           </div>
         </div>
       </div>

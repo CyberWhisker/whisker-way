@@ -1,0 +1,33 @@
+#About h1 {
+    color: #000;
+
+    /* Whiskerway - 1 - lumil8ir/Desktop/Headings/Heading 4 */
+    /* font-family: Poppins; */
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 38.4px */
+}
+
+#About p {
+    color: #000;
+    text-align: justify;
+
+    /* Whiskerway - 1 - lumil8ir/Desktop/Body/Content Regular */
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+}
+
+#About h2 {
+    color: #000;
+
+    /* Whiskerway - 1 - lumil8ir/Desktop/Body/Highlight Bold */
+    font-family: "Plus Jakarta Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 21.6px */
+}

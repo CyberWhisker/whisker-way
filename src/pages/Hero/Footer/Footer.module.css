@@ -1,0 +1,52 @@
+.wave {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.wave svg {
+    position: relative;
+    display: block;
+    width: calc(300% + 1.3px);
+    height: 314px;
+}
+
+.wave .fill {
+    fill: #F1F5F9;;
+}
+
+
+#Footer {
+    background-image: url(../images/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 350px;
+}
+
+#Footer h1 {
+    color: #FFF;
+    font-family: Poppins;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 38.4px */
+}
+
+#Footer p {
+    color: #FFF;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 19.2px */
+}
+
+#Footer span {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+}

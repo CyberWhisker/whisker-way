@@ -1,0 +1,7 @@
+#Faq label {
+    color: var(--Base-Base-Black, #090A0B);
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%; /* 19.2px */
+}

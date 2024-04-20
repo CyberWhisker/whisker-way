@@ -21,3 +21,21 @@
     bottom: 0px;
     right: 0;
 }
+
+@media (max-width: 768px) { /* Adjust the max-width as needed */
+    #Login {
+        background-image: none;
+    }
+
+    #Login img {
+        display: none;
+    }
+
+    #Register {
+        background-image: none;
+    }
+
+    #Register img {
+        display: none;
+    }
+}
