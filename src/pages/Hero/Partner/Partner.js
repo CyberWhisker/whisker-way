@@ -6,12 +6,15 @@ function Partner() {
   return (
     <>
         <div className='rounded-2xl bg-cover bg-no-repeat relative shadow-2xl shadow-black' style={{backgroundImage: `url(${BG})`}}>
-            <div className='grid grid-cols-2 justify-center items-center'>
-                <img src={Pet} alt='Pet' style={{height: '400px'}}/>
+            <div className='grid lg:grid-cols-2 justify-center items-center'>
+                <img className='hidden lg:block' src={Pet} alt='Pet' style={{height: '400px'}}/>
                 <div className='mt-5'>
-                    <h1 className='font-extrabold text-4xl text-white'>Our Partner Shelters and Vets</h1>
-                    <List/>
+                    <h1 className='font-extrabold text-4xl text-white p-5'>Our Partner Shelters and Vets</h1>
+                    <div className='p-5'>
+                        <List/>
+                    </div>
                 </div>
+                <img className='lg:hidden' src={Pet} alt='Pet' style={{height: '400px'}}/>
             </div>
         </div>
     </>

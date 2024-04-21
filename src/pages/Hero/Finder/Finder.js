@@ -32,13 +32,14 @@ function Finder() {
         <section className='flex justify-center '>
           <div className={`border-2 border-slate-400 w-full p-1 text-left flex rounded-bl-md rounded-tl-md`}>
             <img className='h-7' src={HomeIcon} alt='icon'/>
-            <input type='text' className='bg-slate-100 ml-3' placeholder='Enter your ZIP code' />
+            <input type='text' className='bg-slate-100 ml-3 w-full ' placeholder='Enter zip' />
           </div>
           
           <div className='dropdown w-full relative' ref={dropdownRef}>
             <button type='button' className='border-2 border-slate-400 w-full p-1 text-left flex' onClick={() => {setOpenRadius(!openRadius); setOpenTool(false)}}>
               <img className='h-7' src={LocationIcon} alt='icon'/>
-              <label className='ml-2'>Select Radius</label>
+              <label className='ml-2 hidden lg:block'>Select Radius</label>
+              <label className='ml-2 lg:hidden'>Radius</label>
             </button>
             <div className={`z-10 bg-white dropdown-menu w-full rounded-md mt-1 border-slate-400 border-2 p-3 ${openRadius ? 'active' : 'inactive'}`}>
               <DropDownItem>test</DropDownItem>
@@ -50,7 +51,8 @@ function Finder() {
           <div className='dropdown w-full relative' ref={dropdownRef}>
             <button className={`border-2 border-slate-400 w-full p-1 text-left flex`} onClick={() => {setOpenTool(!openTool); setOpenRadius(false)}}>
               <img className='h-7' src={PawIcon} alt='icon'/>
-              <label className='ml-2'>Select Tools</label>
+              <label className='ml-2 hidden lg:block'>Select Tools</label>
+              <label className='ml-2 lg:hidden'>Tools</label>
             </button>
             <div className={`z-10 bg-white dropdown-menu w-full rounded-md mt-1 border-slate-400 border-2 p-3 ${openTool ? 'active' : 'inactive'}`}>
               <DropDownItem>test</DropDownItem>
@@ -63,7 +65,7 @@ function Finder() {
             <img className='h-7' src={FindIcon} alt='icon'/>
           </button>
         </section>
-        <section className='mt-10 grid grid-cols-4 gap-4'>
+        <section className='mt-10 grid lg:grid-cols-4 gap-4 px-20 lg:p-0'>
           <Card>
             <Skeleton/>
           </Card>

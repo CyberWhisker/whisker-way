@@ -13,7 +13,7 @@ function About() {
             <div className='p-3 mt-10'>
                 <p>At Whisker Way, we're not just in the business of finding homes for animals - we're passionate advocates for the well-being of every pet in our care, Founded on the belief that every animal derves a loving family and a safe place to call home, we've dedicated ourselves to making that vision a reality</p>
             </div>
-            <div className='grid grid-cols-2 p-3 gap-10 mt-10'>
+            <div className='grid lg:grid-cols-2 p-3 gap-10 mt-10'>
                 <div className='space-y-8'>
                     <h2>Our Mission</h2>
 
@@ -24,7 +24,7 @@ function About() {
                     <p className=''>We envision a world where every pet finds a loving home and experiences the care they deserve. Through our commitment to rescue, rehabilitation, and rehoming, we strive to create a community where every animal is cherished and nurtured. Together, we're building a brighter future for pets in need.</p>
                 </div>
                 <div className='bg-cover bg-no-repeat rounded-md relative h-72' style={{backgroundImage: `url(${BG})`}}>
-                    <img className='absolute -top-44 right-16' src={Pet} style={{height: '500px'}} alt='pet'/>
+                    <img className='absolute -top-44 right-0 lg:right-16' src={Pet} style={{height: '500px'}} alt='pet'/>
                 </div>
             </div>
         </div>

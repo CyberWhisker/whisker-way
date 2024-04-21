@@ -8,8 +8,14 @@ function TopNav({toggleSidebar}) {
   return (
     <>
         <div className='fixed z-50 top-0' id={styles.TopNav}>
-            <div className='h-full flex item-center p-4 lg:hidden'>
-              <img className='size-10 cursor-pointer' src={Bar} alt='bar' onClick={toggleSidebar}/>
+            <div className='lg:hidden flex justify-between items-center'>
+              <div className='h-full flex item-center p-4'>
+                <img className='size-10 cursor-pointer' src={Bar} alt='bar' onClick={toggleSidebar}/>
+              </div>
+              <div className='flex space-x-3 pr-4'>
+                <Link to='/register'><Button color={'bg-white px-10'}>Register</Button></Link>
+                <Link to='/login'><Button color={'bg-sky-400 border-sky-400 px-10'}>Login</Button></Link>
+              </div>
             </div>
             <div className='hidden lg:flex justify-between items-center h-full  '>
                 <Link to='/'><label>Logo</label></Link>

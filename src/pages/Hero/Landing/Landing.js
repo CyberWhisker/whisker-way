@@ -15,8 +15,8 @@ function Landing() {
       </div>
 
       <div id={styles.Landing}>
-        <div className='grid grid-cols-2 h-full'>
-          <div className='pl-32'>
+        <div className='grid lg:grid-cols-2 h-full'>
+          <div className='px-5 lg:pl-32'>
             <h1 className='mt-28'>Whisker Way</h1>
 
             <section className='mt-14'>
@@ -25,13 +25,19 @@ function Landing() {
             <div className='w-40'>
               <Button color={'bg-slate-100 mt-10'}><span className='font-bold'>Adopt a pet</span></Button>
             </div>
+            {/* For Smaller Screen */}
+            <div className='relative lg:hidden overflow-hidden'>
+              <img src={pet2} alt='pet'/>
+              <img className='absolute -top-52 -left-32' src={pet1} alt='pet'/>
+              <img className='absolute -bottom-32 -right-32' src={pet3} alt='pet'/>
+            </div>
           </div>
           <div className='relative overflow-hidden'>
-            <img className='bottom-0 absolute right-20' src={pet2} alt='pet'/>
-            <img className='-bottom-44 -right-60 absolute' src={pet3} alt='pet' style={{height: '100%'}}/>
+            <img className='hidden lg:block bottom-0 absolute right-20' src={pet2} alt='pet'/>
+            <img className='hidden lg:block -bottom-44 -right-60 absolute' src={pet3} alt='pet' style={{height: '100%'}}/>
           </div>
+          <img className='absolute hidden lg:block' src={pet1} style={{right: '290px', height: '120%', top: '-25%'}} alt='pet'/>
         </div>
-        <img className='absolute' src={pet1} style={{right: '290px', height: '120%', top: '-25%'}} alt='pet'/>
       </div>
       
       <div id={styles.LandingContent}>
@@ -40,7 +46,7 @@ function Landing() {
         </div>
 
         <section>
-          <div className='grid grid-cols-4 gap-3 mt-4 py-14 px-28' id={styles.Content}>
+          <div className='grid lg:grid-cols-4 gap-3 mt-4 py-14 px-28' id={styles.Content}>
             <Content/>
           </div>
         </section>
@@ -53,25 +59,25 @@ function Content()
 {
   return (
     <>
-    <Card style={'bg-sky-100  px-8 space-y-10 pb-16 pt-10'}>
+    <Card style={'bg-sky-200  px-8 space-y-10 pb-16 pt-10'}>
       <div className='flex justify-center'>
         <label>Life-Saving Mission</label>
       </div>
       <p>By choosing to adopt from us, you're not just bringing home a pet, our animals come from shelters or rescue groups, giving them a secod chance at happiness.</p>
     </Card>
-    <Card style={'bg-sky-100  px-8 space-y-10 pb-16 pt-10'}>
+    <Card style={'bg-sky-200  px-8 space-y-10 pb-16 pt-10'}>
       <div className='flex justify-center'>
         <label>Variety of Pets</label>
       </div>
       <p>From playful puppies and kittens to seasoned seniors, we have a wide range of pets available for adoption, we're confident we can find the perfect match for you.</p>
     </Card>
-    <Card style={'bg-sky-100  px-8 space-y-10 pb-16 pt-10'}>
+    <Card style={'bg-sky-200  px-8 space-y-10 pb-16 pt-10'}>
       <div className='flex justify-center'>
         <label>Health and Wellness</label>
       </div>
       <p>Each of our pets receives thorough medical care including vaccinations, spaying/neutering, and any nessary treatments.</p>
     </Card>
-    <Card style={'bg-sky-100  px-8 space-y-10 pb-16 pt-10'}>
+    <Card style={'bg-sky-200  px-8 space-y-10 pb-16 pt-10'}>
       <div className='flex justify-center'>
         <label>Support and Guidance</label>
       </div>

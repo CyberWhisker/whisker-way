@@ -68,3 +68,9 @@
     font-weight: 700;
     line-height: 120%; /* 38.4px */
 }
+
+@media (max-width: 768px) {
+    #Landing {
+        height: 100%;
+    }
+}

@@ -19,28 +19,28 @@ function Hero() {
       <section>
         <TopNav toggleSidebar={toggleSidebar}/>
       </section>
-      {/* <section>
+      <section>
         <SideBar isOpen={isSidebarOpen}/>
-      </section> */}
+      </section>
       <section style={{marginTop: '4.7%'}}>
         <Landing/>
       </section>
-      <section className='px-52 mt-10'>
+      <section className='px-5 lg:px-52 mt-10'>
         <Finder/>
       </section>
-      <section className='px-20 mt-10'>
+      <section className='px-5 lg:px-20 mt-10'>
         <Partner/>
       </section>
-      <section className='px-20 mt-20'>
+      <section className='px-5 lg:px-20 mt-20'>
         <About/>
       </section>
-      <section className='px-20 mt-10'>
+      <section className='px-5 lg:px-20 mt-10'>
         <Contact/>
       </section>
-      <section className='px-20 mt-10'>
+      <section className='px-5 lg:px-20 mt-10'>
         <Faq/>
       </section>
-      <section>
+      <section className='mt-10 lg:mt-0'>
         <Footer/>
       </section>
     </>

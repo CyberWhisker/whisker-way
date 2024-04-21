@@ -73,7 +73,7 @@ function Contact() {
             <div className='flex justify-center'>
                 <h1>Contact Us</h1>
             </div>
-            <div className='px-28 mt-10'>
+            <div className='lg:px-28 mt-10'>
                 <div>
                     <Form/>
                 </div>
@@ -90,7 +90,7 @@ function Form() {
     return (
         <>
             <form className='space-y-2'>
-                <div className='grid grid-cols-2 gap-4'>
+                <div className='grid lg:grid-cols-2 gap-4'>
                     <div>
                         <label>Your Name:</label>
                         <Input name={'name'} text={'Enter Name'}/>
@@ -121,7 +121,7 @@ function Form() {
 function List() {
     return (
         <>
-            <div className='grid grid-cols-2 gap-x-28 gap-y-4'>
+            <div className='grid lg:grid-cols-2 gap-x-28 gap-y-4'>
                 {partnerList.map((partner, index) => (
                     <div key={index}>
                         <Card>

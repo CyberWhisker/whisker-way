@@ -18,5 +18,49 @@
 @media (max-width: 768px) {
     #TopNav {
         padding-left: 0px;
+        padding-right: 0px;
     }
+}
+
+#SideBar {
+    top: 71px;
+}
+
+#SideBar li {
+    position: relative;
+    cursor: pointer;
+}
+
+#SideBar li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust thickness of the line */
+    background-color: black; /* Adjust color of the line */
+    transition: width 0.3s ease; /* Adjust transition speed */
+}
+
+#SideBar li:hover::after {
+    width: 100%; /* Make the line move to full width */
+}
+
+#TopNav label {
+    position: relative;
+}
+
+#TopNav label::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust thickness of the line */
+    background-color: black; /* Adjust color of the line */
+    transition: width 0.3s ease; /* Adjust transition speed */
+}
+
+#TopNav label:hover::after {
+    width: 100%; /* Make the line move to full width */
 }

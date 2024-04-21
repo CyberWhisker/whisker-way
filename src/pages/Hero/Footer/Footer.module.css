@@ -50,3 +50,9 @@
     height: 26px;
     flex-shrink: 0;
 }
+
+@media (max-width: 768px) {
+    #Footer svg{
+        display: none;
+    }
+}

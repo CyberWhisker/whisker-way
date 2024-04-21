@@ -32,7 +32,7 @@ let faqData = [
 
 function Fact() {
   return (
-    <div className='px-28' id={Styles.Faq}>
+    <div className='lg:px-28' id={Styles.Faq}>
       <div className='flex justify-center'>
         <h1>FAQS</h1>
       </div>
