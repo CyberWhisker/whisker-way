@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom';
 import { Button } from '../../../components';
 import Bar from './images/bar.svg';
 
-function TopNav({toggleSidebar}) {
+function TopNav({toggleSidebar, references}) {
+  const [landingRef, finderRef, partnerRef, aboutRef, contactRef, faqRef] = references;
   return (
     <>
         <div className='fixed z-50 top-0' id={styles.TopNav}>
@@ -18,15 +19,27 @@ function TopNav({toggleSidebar}) {
               </div>
             </div>
             <div className='hidden lg:flex justify-between items-center h-full  '>
-                <Link to='/'><label>Logo</label></Link>
+                <label onClick={() => {
+                  landingRef.current?.scrollIntoView({ behavior: 'smooth' });
+                }}>Logo</label>
                 <div className='flex justify-end gap-3 items-center'>
-                    <Link to='/finder'><label>Finder Tools</label></Link>
-                    <Link to='/partner'><label>Out Partners</label></Link>
-                    <Link to='/about'><label>About Us</label></Link>
-                    <Link to='/contact'><label>Contact</label></Link>
-                    <Link to='/faq'><label>FAQs</label></Link>
-                    <Link to='/register'><Button color={'bg-white px-10'}>Register</Button></Link>
-                    <Link to='/login'><Button color={'bg-sky-400 border-sky-400 px-10'}>Login</Button></Link>
+                  <label onClick={() => {
+                    finderRef.current?.scrollIntoView({behavior: 'smooth'});
+                  }}>Finder Tools</label>
+                  <label onClick={() => {
+                    partnerRef.current?.scrollIntoView({behavior: 'smooth'});
+                  }}>Out Partners</label>
+                  <label onClick={() => {
+                    aboutRef.current?.scrollIntoView({behavior: 'smooth'});
+                  }}>About Us</label>
+                  <label onClick={() => {
+                    contactRef.current?.scrollIntoView({behavior: 'smooth'});
+                  }}>Contact</label>
+                  <label onClick={() => {
+                    faqRef.current?.scrollIntoView({behavior: 'smooth'})
+                  }}>FAQs</label>
+                  <Link to='/register'><Button color={'bg-white px-10'}>Register</Button></Link>
+                  <Link to='/login'><Button color={'bg-sky-400 border-sky-400 px-10'}>Login</Button></Link>
                 </div>
             </div>
         </div>

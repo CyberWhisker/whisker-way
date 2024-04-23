@@ -7,6 +7,8 @@ function SideBar(props) {
   // Calculate the transition duration based on isOpen
   const transitionDuration = props.isOpen ? '0.5s' : '0.3s';
 
+  const [landingRef, finderRef, partnerRef, aboutRef, contactRef, faqRef] = props.references;
+  const toggleSidebar = props.toggleSidebar;
   return (
     <>
       <div
@@ -18,11 +20,26 @@ function SideBar(props) {
         }}
       >
         <ul className='p-4 space-y-5 w-60'>
-          <li className=''>Finder Tools</li>
-          <li>Our Partner</li>
-          <li>About Us</li>
-          <li>Contact</li>
-          <li>FAQs</li>
+          <li onClick={() => {
+            toggleSidebar();
+            finderRef.current?.scrollIntoView({ behavior: 'smooth' });
+          }}>Finder Tools</li>
+          <li onClick={() => {
+            toggleSidebar();
+            partnerRef.current?.scrollIntoView({behavior: 'smooth'});
+          }}>Our Partner</li>
+          <li onClick={() => {
+            toggleSidebar();
+            aboutRef.current?.scrollIntoView({behavior: 'smooth'});
+          }}>About Us</li>
+          <li onClick={() => {
+            toggleSidebar();
+            contactRef.current?.scrollIntoView({behavior: 'smooth'});
+          }}>Contact</li>
+          <li onClick={() => {
+            toggleSidebar();
+            faqRef.current?.scrollIntoView({behavior: 'smooth'});
+          }}>FAQs</li>
         </ul>
       </div>
     </>

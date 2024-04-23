@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Landing from './Landing'
 import { SideBar, TopNav } from './components'
 import { Finder } from './Finder'
@@ -14,30 +14,36 @@ function Hero() {
   const toggleSidebar = () => {
       setIsSidebarOpen(!isSidebarOpen);
   }
+  const landingRef = useRef();
+  const finderRef = useRef();
+  const partnerRef = useRef();
+  const aboutRef = useRef();
+  const contactRef = useRef();
+  const faqRef = useRef();
   return (
     <>
       <section>
-        <TopNav toggleSidebar={toggleSidebar}/>
+        <TopNav toggleSidebar={toggleSidebar} references={[landingRef, finderRef, partnerRef, aboutRef, contactRef, faqRef]}/>
       </section>
       <section>
-        <SideBar isOpen={isSidebarOpen}/>
+        <SideBar toggleSidebar={toggleSidebar} isOpen={isSidebarOpen} references={[landingRef, finderRef, partnerRef, aboutRef, contactRef, faqRef]}/>
       </section>
-      <section style={{marginTop: '4.7%'}}>
+      <section ref={landingRef} style={{marginTop: '4.7%'}}>
         <Landing/>
       </section>
-      <section className='px-5 lg:px-52 mt-10'>
+      <section ref={finderRef} className='px-5 lg:px-52 mt-10'>
         <Finder/>
       </section>
-      <section className='px-5 lg:px-20 mt-10'>
+      <section ref={partnerRef} className='px-5 lg:px-20 mt-10'>
         <Partner/>
       </section>
-      <section className='px-5 lg:px-20 mt-20'>
+      <section ref={aboutRef} className='px-5 lg:px-20 mt-20'>
         <About/>
       </section>
-      <section className='px-5 lg:px-20 mt-10'>
+      <section ref={contactRef} className='px-5 lg:px-20 mt-10'>
         <Contact/>
       </section>
-      <section className='px-5 lg:px-20 mt-10'>
+      <section ref={faqRef} className='px-5 lg:px-20 mt-10'>
         <Faq/>
       </section>
       <section className='mt-10 lg:mt-0'>

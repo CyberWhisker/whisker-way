@@ -3,7 +3,7 @@ import styles from './Landing.module.css';
 import pet1 from '../images/WEB_1.png';
 import pet2 from '../images/WEB_2.png';
 import pet3 from '../images/WEB_6.png';
-import { Card, Button } from '../../../components';
+import {Button } from '../../../components';
 
 function Landing() {
   return (
@@ -59,31 +59,41 @@ function Content()
 {
   return (
     <>
-    <Card style={'bg-sky-200  px-8 space-y-10 pb-16 pt-10'}>
+    <Card>
       <div className='flex justify-center'>
         <label>Life-Saving Mission</label>
       </div>
       <p>By choosing to adopt from us, you're not just bringing home a pet, our animals come from shelters or rescue groups, giving them a secod chance at happiness.</p>
     </Card>
-    <Card style={'bg-sky-200  px-8 space-y-10 pb-16 pt-10'}>
+    <Card>
       <div className='flex justify-center'>
         <label>Variety of Pets</label>
       </div>
       <p>From playful puppies and kittens to seasoned seniors, we have a wide range of pets available for adoption, we're confident we can find the perfect match for you.</p>
     </Card>
-    <Card style={'bg-sky-200  px-8 space-y-10 pb-16 pt-10'}>
+    <Card>
       <div className='flex justify-center'>
         <label>Health and Wellness</label>
       </div>
       <p>Each of our pets receives thorough medical care including vaccinations, spaying/neutering, and any nessary treatments.</p>
     </Card>
-    <Card style={'bg-sky-200  px-8 space-y-10 pb-16 pt-10'}>
+    <Card>
       <div className='flex justify-center'>
         <label>Support and Guidance</label>
       </div>
       <p>Our team here to support you every step of the way, from choosing the right pet for your family to providing tips and resources for successful integration into your home.</p>
     </Card>
     </>
+  )
+}
+
+function Card(props) {
+  return (
+      <>
+          <div className={styles.Card}>
+              {props.children}
+          </div>
+      </>
   )
 }
 
