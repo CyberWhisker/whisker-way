@@ -1,0 +1,66 @@
+[
+    {
+        "_id": 1,
+        "name": "Jupiter",
+        "gender": "Male",
+        "species": "Dog",
+        "breed": "American Bully",
+        "location": "AKF Animal Rescue & Rehabilitation Center"
+    },
+    {
+        "_id": 2,
+        "name": "Jupiter",
+        "gender": "Male",
+        "species": "Dog",
+        "breed": "American Bully",
+        "location": "AKF Animal Rescue & Rehabilitation Center"
+    },
+    {
+        "_id": 3,
+        "name": "Jupiter",
+        "gender": "Male",
+        "species": "Dog",
+        "breed": "American Bully",
+        "location": "AKF Animal Rescue & Rehabilitation Center"
+    },
+    {
+        "_id": 4,
+        "name": "Jupiter",
+        "gender": "Male",
+        "species": "Dog",
+        "breed": "American Bully",
+        "location": "AKF Animal Rescue & Rehabilitation Center"
+    },
+    {
+        "_id": 5,
+        "name": "Jupiter",
+        "gender": "Male",
+        "species": "Dog",
+        "breed": "American Bully",
+        "location": "AKF Animal Rescue & Rehabilitation Center"
+    },
+    {
+        "_id": 6,
+        "name": "Jupiter",
+        "gender": "Male",
+        "species": "Dog",
+        "breed": "American Bully",
+        "location": "AKF Animal Rescue & Rehabilitation Center"
+    },
+    {
+        "_id": 7,
+        "name": "Jupiter",
+        "gender": "Male",
+        "species": "Dog",
+        "breed": "American Bully",
+        "location": "AKF Animal Rescue & Rehabilitation Center"
+    },
+    {
+        "_id": 8,
+        "name": "Jupiter",
+        "gender": "Male",
+        "species": "Dog",
+        "breed": "American Bully",
+        "location": "AKF Animal Rescue & Rehabilitation Center"
+    }
+]

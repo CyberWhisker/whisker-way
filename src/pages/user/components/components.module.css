@@ -1,0 +1,72 @@
+#TopNav {
+    background-image: url(../../../images//topNavBG.svg);
+    padding-right: 60px;
+    padding-left: 60px;
+    width: 100%;
+    height: 71px;
+}
+
+#TopNav div label {
+    color: var(--Base-Base-Black, #090A0B);
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    #TopNav {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+}
+
+#SideBar {
+    top: 71px;
+}
+
+#SideBar li {
+    position: relative;
+    cursor: pointer;
+}
+
+#SideBar li::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; /* Adjust thickness of the line */
+    background-color: black; /* Adjust color of the line */
+    transition: width 0.3s ease; /* Adjust transition speed */
+}
+
+#SideBar li:hover::after {
+    width: 100%; /* Make the line move to full width */
+}
+
+#TopNav a {
+    position: relative;
+    color: #000;
+    font-family: "Plus Jakarta Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+}
+
+/* #TopNav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px; 
+    background-color: black;
+    transition: width 0.3s ease; 
+}
+
+#TopNav a:hover::after {
+    width: 100%; 
+} */

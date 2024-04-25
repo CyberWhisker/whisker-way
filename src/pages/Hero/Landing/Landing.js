@@ -4,6 +4,7 @@ import pet1 from '../images/WEB_1.png';
 import pet2 from '../images/WEB_2.png';
 import pet3 from '../images/WEB_6.png';
 import {Button } from '../../../components';
+import { Link } from 'react-router-dom';
 
 function Landing() {
   return (
@@ -23,7 +24,9 @@ function Landing() {
               <p>At Whisker Way, we believe in creating forever homes for our furry friends. Every pet deserves a loving family, and we're here to make that connection happen. Whether you're lokking for a playful pup to romp around with or a cuddly companion to keep you company, we have the perfect match waiting for you.</p>
             </section>
             <div className='w-40'>
-              <Button color={'bg-slate-100 mt-10'}><span className='font-bold'>Adopt a pet</span></Button>
+              <Link to='/user'>
+                <Button color={'bg-slate-100 mt-10'}><span className='font-bold'>Adopt a pet</span></Button>
+              </Link>
             </div>
             {/* For Smaller Screen */}
             <div className='relative lg:hidden overflow-hidden'>

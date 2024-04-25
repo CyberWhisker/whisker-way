@@ -1,11 +1,13 @@
 .wave {
     /* position: absolute; */
-    top: 0;
+    bottom: 0;
     left: 0;
     width: 100%;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
+    margin: 0;
+    padding: 0;
 }
 
 .wave svg {
@@ -16,18 +18,21 @@
 }
 
 .wave .fill {
-    fill: #F1F5F9;;
+    fill: #F1F5F9;
 }
 
 
 #Footer {
-    background-image: url(../images/bg.png);
+    background-image: url(./images/bg.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-position: center bottom; /* Adjusted to center horizontally and bottom vertically */
     height: 350px;
+    padding: 0;
+    margin: 0;
+    position: relative;
 }
+
 
 #Footer h1 {
     color: #FFF;
