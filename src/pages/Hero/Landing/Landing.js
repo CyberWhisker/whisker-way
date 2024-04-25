@@ -39,7 +39,7 @@ function Landing() {
             <img className='hidden lg:block bottom-0 absolute right-20' src={pet2} alt='pet'/>
             <img className='hidden lg:block -bottom-44 -right-60 absolute' src={pet3} alt='pet' style={{height: '100%'}}/>
           </div>
-          <img className='absolute hidden lg:block' src={pet1} style={{right: '290px', height: '120%', top: '-25%'}} alt='pet'/>
+          <img className='absolute hidden lg:block' src={pet1} style={{right: '290px', height: '120%', top: '-250px'}} alt='pet'/>
         </div>
       </div>
       

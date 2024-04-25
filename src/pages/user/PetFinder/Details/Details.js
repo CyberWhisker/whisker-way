@@ -7,8 +7,7 @@ import { Footer } from '../../Footer';
 function Details() {
   const { id } = useParams();
   const petList = PetList;
-  const pet = petList.find(item => item._id == id); // Use strict equality (===) to compare strings
-  console.log(pet);
+  const pet = petList.find(item => item._id == id);
   return (
     <>
       <div className='h-screen'>
