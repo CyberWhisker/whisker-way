@@ -5,65 +5,24 @@ import Email from './images/email.svg';
 import Phone from './images/phone.svg';
 import Web from './images/web.svg';
 import Location from './images/location.svg';
+import data from './data.json';
+import { motion } from 'framer-motion';
 
-const partnerList = [
-    {
-        title: 'Animal Rescue PH',
-        phone: '02-123-4567',
-        email: 'animalrescueph@yahoo.com',
-        address: '123 Main Street, Quezon City, Metro Manila',
-        web: 'animalrescueph.org',
+const partnerList = data;
+
+const slideAnimation = {
+    initial: {
+      opacity: 0,
+      x: -100
     },
-    {
-        title: 'Shelter Care PH',
-        phone: '02-987-6543',
-        email: 'sheltercareph@gmail.com',
-        address: '789 Oak Street, Pasig City, Metro Manila',
-        web: 'sheltercareph.org',
-    },
-    {
-        title: 'Paw Print PH',
-        phone: '02-456-7890',
-        email: 'pawprintsph@outlook.com',
-        address: '678 Walnut Street, Parañaque City, Metro Manila',
-        web: 'pawprintsph.org',
-    },
-    {
-        title: 'Compassionate Vets ',
-        phone: '02-789-0123',
-        email: 'compassionatevets@yahoo.com',
-        address: '890 Birch Street, Manila City, Metro Manila',
-        web: 'compassionatevetsph.com',
-    },
-    {
-        title: 'Metro Vet Clinic',
-        phone: '02-345-6789',
-        email: 'metrovetclinic@outlook.com',
-        address: '321 Maple Avenue, Mandaluyong City, Metro Manila',
-        web: 'metrovetclinicph.com',
-    },
-    {
-        title: 'Pet Care Clinic',
-        phone: '02-876-5432',
-        email: 'petcareclinic@gmail.com',
-        address: '456 Elm Street, Makati City, Metro Manila',
-        web: 'petcareclinicph.com',
-    },
-    {
-        title: 'Vet Solutions',
-        phone: '02-890-1234',
-        email: 'vetsolutionsph@hotmail.com',
-        address: '234 Cedar Street, Marikina City, Metro Manila',
-        web: 'vetsolutionsph.com',
-    },
-    {
-        title: 'Metro Animal Clinic PH',
-        phone: '02-345-6789',
-        email: 'metroanimalclinicph.com',
-        address: '567 Pine Street, Taguig City, Metro Manila',
-        web: 'metroanimalclinicph.com',
-    },
-]
+    animate: (index) => ({
+      opacity: 1,
+      x: 0,
+      transition: {
+        delay: 0.2 * index
+      }
+    })
+}
 
 
 function Contact() {
@@ -123,7 +82,15 @@ function List() {
         <>
             <div className='grid lg:grid-cols-2 gap-x-28 gap-y-4'>
                 {partnerList.map((partner, index) => (
-                    <div key={index}>
+                    <motion.div key={index}
+                        variants={slideAnimation}
+                        initial="initial"
+                        whileInView="animate"
+                        custom={index}
+                        viewport={{
+                            once: true
+                        }}
+                    >
                         <Card>
                             <div className='mb-10'>
                                 <label>{partner.title}</label>
@@ -155,7 +122,7 @@ function List() {
                                 </div>
                             </div>
                         </Card>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </>

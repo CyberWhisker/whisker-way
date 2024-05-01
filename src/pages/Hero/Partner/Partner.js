@@ -1,6 +1,22 @@
 import React from 'react';
 import BG from '../images/bg.png';
 import Pet from '../images/WEB_4.png';
+import data from './data.json';
+import { motion } from 'framer-motion';
+
+const slideAnimation = {
+    initial: {
+      opacity: 0,
+      y: -100
+    },
+    animate: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.05 * index
+      }
+    })
+}
 
 function Partner() {
   return (
@@ -22,41 +38,21 @@ function Partner() {
 }
 
 function List() {
+    const dataList = data;
     return(
         <>    
             <ul className='grid grid-cols-2 gap-5 text-white mt-5 text-lg font-bold'>
-                <li className='flex items-center'>
-                    <div className='bg-black h-10 w-10'></div>
-                    <a href='#' className='ml-3'>Animal Rescue PH</a>
-                </li>
-                <li className='flex items-center'>
-                    <div className='bg-black h-10 w-10'></div>
-                    <a href='#' className='ml-3'>Metro Vet Clinic</a>
-                </li>
-                <li className='flex items-center'>
-                    <div className='bg-black h-10 w-10'></div>
-                    <a href='#' className='ml-3'>Shelter Care Ph</a>
-                </li>
-                <li className='flex items-center'>
-                    <div className='bg-black h-10 w-10'></div>
-                    <a href='#' className='ml-3'>Pet Care Clinic</a>
-                </li>
-                <li className='flex items-center'>
-                    <div className='bg-black h-10 w-10'></div>
-                    <a href='#' className='ml-3'>Paw Print PH</a>
-                </li>
-                <li className='flex items-center'>
-                    <div className='bg-black h-10 w-10'></div>
-                    <a href='#' className='ml-3'>Vet Solutions</a>
-                </li>
-                <li className='flex items-center'>
-                    <div className='bg-black h-10 w-10'></div>
-                    <a href='#' className='ml-3'>Compassionate Vets</a>
-                </li>
-                <li className='flex items-center'>
-                    <div className='bg-black h-10 w-10'></div>
-                    <a href='#' className='ml-3'>Metro Animal Clinic PH</a>
-                </li>
+                {dataList.map((item, index) => (
+                    <motion.li className='flex items-center' key={index}
+                        variants={slideAnimation}
+                        initial="initial"
+                        whileInView="animate"
+                        custom={index}
+                    >
+                        <div className='bg-black h-10 w-10'></div>
+                        <a href='#' className='ml-3'>{item.title}</a>
+                    </motion.li>
+                ))}
             </ul>
         </>
     )

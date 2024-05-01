@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, {useRef, useState } from 'react'
 import Landing from './Landing'
 import { SideBar, TopNav } from './components'
 import { Finder } from './Finder'
@@ -28,7 +28,7 @@ function Hero() {
       <section>
         <SideBar toggleSidebar={toggleSidebar} isOpen={isSidebarOpen} references={[landingRef, finderRef, partnerRef, aboutRef, contactRef, faqRef]}/>
       </section>
-      <section ref={landingRef} style={{marginTop: '4.7%'}}>
+      <section ref={landingRef} style={{marginTop: '4.7%'}} >
         <Landing/>
       </section>
       <section ref={finderRef} className='px-5 lg:px-52 mt-10'>
@@ -54,3 +54,4 @@ function Hero() {
 }
 
 export default Hero
+

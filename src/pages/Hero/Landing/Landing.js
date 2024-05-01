@@ -1,10 +1,39 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styles from './Landing.module.css';
 import pet1 from '../images/WEB_1.png';
 import pet2 from '../images/WEB_2.png';
 import pet3 from '../images/WEB_6.png';
 import {Button } from '../../../components';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import data from './data.json';
+
+const slideRightInAnimation = {
+  initial: {
+    opacity: 0,
+    x: -100
+  },
+  animate: (index) => ({
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.5 * index
+    }
+  })
+}
+const slideLeftInAnimation = {
+  initial: {
+    opacity: 0,
+    y: 100
+  },
+  animate: (index) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5 * index
+    }
+  })
+}
 
 function Landing() {
   return (
@@ -18,16 +47,32 @@ function Landing() {
       <div id={styles.Landing}>
         <div className='grid lg:grid-cols-2 h-full'>
           <div className='px-5 lg:pl-32'>
-            <h1 className='mt-28'>Whisker Way</h1>
-
-            <section className='mt-14'>
-              <p>At Whisker Way, we believe in creating forever homes for our furry friends. Every pet deserves a loving family, and we're here to make that connection happen. Whether you're lokking for a playful pup to romp around with or a cuddly companion to keep you company, we have the perfect match waiting for you.</p>
-            </section>
-            <div className='w-40'>
+            <div className='mt-20 space-y-1 text-white'>
+              <motion.h1 
+                variants={slideRightInAnimation}
+                initial="initial"
+                whileInView="animate"
+                custom={0}
+              >
+              Whisker Way</motion.h1>
+              <motion.p 
+                variants={slideRightInAnimation}
+                initial="initial"
+                whileInView="animate"
+                custom={1}
+              >
+              At Whisker Way, we believe in creating forever homes for our furry friends. Every pet deserves a loving family, and we're here to make that connection happen. Whether you're lokking for a playful pup to romp around with or a cuddly companion to keep you company, we have the perfect match waiting for you.</motion.p>
+            </div>
+            <motion.div className='w-40'
+              variants={slideRightInAnimation}
+              initial="initial"
+              whileInView="animate"
+              custom={2}
+            >
               <Link to='/user'>
                 <Button color={'bg-slate-100 mt-10'}><span className='font-bold'>Adopt a pet</span></Button>
               </Link>
-            </div>
+            </motion.div>
             {/* For Smaller Screen */}
             <div className='relative lg:hidden overflow-hidden'>
               <img src={pet2} alt='pet'/>
@@ -36,10 +81,25 @@ function Landing() {
             </div>
           </div>
           <div className='relative overflow-hidden'>
-            <img className='hidden lg:block bottom-0 absolute right-20' src={pet2} alt='pet'/>
-            <img className='hidden lg:block -bottom-44 -right-60 absolute' src={pet3} alt='pet' style={{height: '100%'}}/>
+            <motion.img className='hidden lg:block bottom-0 absolute right-20' src={pet2} alt='pet'
+              variants={slideLeftInAnimation}
+              initial='initial'
+              whileInView='animate'
+              custom={0}
+            />
+            <motion.img className='hidden lg:block -bottom-44 -right-60 absolute' src={pet3} alt='pet' style={{height: '100%'}}
+              variants={slideLeftInAnimation}
+              initial='initial'
+              whileInView='animate'
+              custom={1}
+            />
+            <motion.img className='absolute hidden lg:block' src={pet1} style={{right: '290px', height: '150%', bottom: '-60px'}} alt='pet'
+              variants={slideLeftInAnimation}
+              initial='initial'
+              whileInView='animate'
+              custom={2}
+            />
           </div>
-          <img className='absolute hidden lg:block' src={pet1} style={{right: '290px', height: '120%', top: '-250px'}} alt='pet'/>
         </div>
       </div>
       
@@ -60,43 +120,24 @@ function Landing() {
 
 function Content() 
 {
+  const dataList = data;
   return (
     <>
-    <Card>
-      <div className='flex justify-center'>
-        <label>Life-Saving Mission</label>
-      </div>
-      <p>By choosing to adopt from us, you're not just bringing home a pet, our animals come from shelters or rescue groups, giving them a secod chance at happiness.</p>
-    </Card>
-    <Card>
-      <div className='flex justify-center'>
-        <label>Variety of Pets</label>
-      </div>
-      <p>From playful puppies and kittens to seasoned seniors, we have a wide range of pets available for adoption, we're confident we can find the perfect match for you.</p>
-    </Card>
-    <Card>
-      <div className='flex justify-center'>
-        <label>Health and Wellness</label>
-      </div>
-      <p>Each of our pets receives thorough medical care including vaccinations, spaying/neutering, and any nessary treatments.</p>
-    </Card>
-    <Card>
-      <div className='flex justify-center'>
-        <label>Support and Guidance</label>
-      </div>
-      <p>Our team here to support you every step of the way, from choosing the right pet for your family to providing tips and resources for successful integration into your home.</p>
-    </Card>
+      {dataList.map((item, index) => (
+          <motion.div className={styles.Card} key={index}
+            variants={slideRightInAnimation}
+            initial="initial"
+            whileInView="animate"
+            custom={index}
+          >
+            <div className='flex justify-center'>
+              <label>{item.title}</label>
+            </div>
+            <p>{item.description}</p>
+          </motion.div>
+      ))}
+    
     </>
-  )
-}
-
-function Card(props) {
-  return (
-      <>
-          <div className={styles.Card}>
-              {props.children}
-          </div>
-      </>
   )
 }
 
